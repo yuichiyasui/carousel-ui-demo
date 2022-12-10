@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import {Image} from './ui/Image'
+import {Image} from '../../ui/Image'
 
-function App() {
+export const App = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -30,5 +30,3 @@ function App() {
     </div>
   )
 }
-
-export default App
