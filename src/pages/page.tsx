@@ -5,6 +5,7 @@ import { Image } from "~/ui/Image";
 import { Navigation } from "~/ui/Navigation";
 import { Carousel } from "~/ui/Carousel";
 import { useCallback } from "react";
+import { PageTitle } from "~/ui/PageTitle";
 
 export const TopPage = () => {
   const [basicEmblaRef] = useEmblaCarousel({ loop: true });
@@ -22,11 +23,11 @@ export const TopPage = () => {
 
   return (
     <main>
-      <h1>Carousel UI Demo</h1>
-      <Navigation />
+      <PageTitle className="mb-4">Carousel UI Demo</PageTitle>
+      <Navigation className="mx-auto mb-6" />
 
-      <section>
-        <h2>basic</h2>
+      <section className="basic-section">
+        <h2 className="font-bold text-2xl text-center mb-4">basic</h2>
         <Carousel ref={basicEmblaRef}>
           <Carousel.Container>
             <Carousel.Slide>
@@ -43,7 +44,7 @@ export const TopPage = () => {
       </section>
 
       <section className="with-button-section">
-        <h2>with button</h2>
+        <h2 className="font-bold text-2xl text-center mb-4">with button</h2>
         <Carousel className="carousel-with-button">
           <Carousel.Viewport ref={withButtonEmblaRef}>
             <Carousel.Container>

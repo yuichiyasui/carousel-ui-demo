@@ -1,3 +1,7 @@
+.basic-section {
+  max-width: 512px;
+  margin: 0 auto 24px;
+}
 .embla {
   overflow: hidden;
 }
@@ -6,6 +10,7 @@
 }
 .embla__slide {
   flex: 0 0 100%;
+  cursor: grab;
 }
 
 .with-button-section {
@@ -15,15 +20,47 @@
 .carousel-with-button {
   position: relative;
 }
-.next-button,.prev-button {
+.next-button,
+.prev-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.8;
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  transition: opacity 0.5s;
+  opacity: 0.6;
+}
+.next-button:hover,
+.prev-button:hover {
+  opacity: 0.9;
 }
 .next-button {
   right: 0;
 }
+.next-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 2px);
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
 .prev-button {
   left: 0;
+}
+.prev-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) rotate(45deg);
 }

@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
+import { InternalLink } from "~/ui/InternalLink";
 
-export const Navigation = () => {
+type Props = {
+  className?: string;
+};
+
+export const Navigation = ({ className }: Props) => {
   return (
-    <nav>
-      <ul>
+    <nav className={`table ${className ? className : ""}`}>
+      <ul className="flex gap-x-5">
         <li>
-          <Link to="/">TOP</Link>
+          <InternalLink to="/">TOP</InternalLink>
         </li>
         <li>
-          <Link to="/css-modules">CSS Modules</Link>
+          <InternalLink to="/css-modules">CSS Modules</InternalLink>
         </li>
         <li>
-          <Link to="/tailwind-css">TailwindCSS</Link>
+          <InternalLink to="/tailwind-css">TailwindCSS</InternalLink>
         </li>
       </ul>
     </nav>

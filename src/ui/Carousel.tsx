@@ -35,19 +35,11 @@ const CarouselSlide = (props: CarouselSlideProps) => {
 type ButtonProps = HTMLAttributes<HTMLButtonElement> & { className?: string };
 
 const CarouselPrevButton = (props: ButtonProps) => {
-  return (
-    <button type="button" title="previous" {...props}>
-      <span>{"<"}</span>
-    </button>
-  );
+  return <button type="button" title="previous" {...props} />;
 };
 
 const CarouselNextButton = (props: ButtonProps) => {
-  return (
-    <button type="button" title="next" {...props}>
-      <span>{">"}</span>
-    </button>
-  );
+  return <button type="button" title="next" {...props} />;
 };
 
 type CarouselViewportProps = {

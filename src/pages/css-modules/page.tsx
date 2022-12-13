@@ -1,10 +1,11 @@
 import { Navigation } from "~/ui/Navigation";
+import { PageTitle } from "~/ui/PageTitle";
 
 export const CssModulesPage = () => {
   return (
     <main>
-      <h1>CSS Modules</h1>
-      <Navigation />
+      <PageTitle className="mb-4">CSS Modules</PageTitle>
+      <Navigation className="mx-auto mb-6" />
     </main>
   );
 };
