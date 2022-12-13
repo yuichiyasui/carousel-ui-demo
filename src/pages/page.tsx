@@ -1,8 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react";
 
-import styles from "./page.module.css";
+import "./style.css";
 import { Image } from "~/ui/Image";
 import { Navigation } from "~/ui/Navigation";
+import { Carousel } from "~/ui/Carousel";
 
 export const TopPage = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true });
@@ -11,26 +12,27 @@ export const TopPage = () => {
     <main>
       <h1>Carousel UI Demo</h1>
       <Navigation />
-      <div ref={emblaRef} className={`${styles.embla} embla`}>
-        <div className={`${styles.embla__container} embla__container`}>
-          <div className={`${styles.embla__slide} embla__slide`}>
+      <Carousel ref={emblaRef}>
+        <Carousel.Container>
+          <Carousel.Slide>
             <Image width={512} height={384} src="/sample1.jpg" alt="" />
-          </div>
-          <div className={`${styles.embla__slide} embla__slide`}>
+          </Carousel.Slide>
+          <Carousel.Slide>
             <Image width={512} height={384} src="/sample2.jpg" alt="" />
-          </div>
-          <div className={`${styles.embla__slide} embla__slide`}>
+          </Carousel.Slide>
+          <Carousel.Slide>
             <Image width={512} height={384} src="/sample3.jpg" alt="" />
-          </div>
-        </div>
-      </div>
+          </Carousel.Slide>
+        </Carousel.Container>
+      </Carousel>
+
       <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
         <Image
           width={100}
           height={100}
           src="/logo/vite.svg"
           alt="Vite logo"
-          className={styles.logo}
+          className="logo"
         />
       </a>
       <a href="https://reactjs.org" target="_blank" rel="noreferrer">
@@ -39,7 +41,7 @@ export const TopPage = () => {
           height={100}
           src="/logo/react.svg"
           alt="React logo"
-          className={`${styles.logo} ${styles.react}`}
+          className="logo react"
         />
       </a>
     </main>
