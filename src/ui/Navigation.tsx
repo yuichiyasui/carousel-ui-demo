@@ -10,6 +10,9 @@ export const Navigation = () => {
         <li>
           <Link to="/css-modules">CSS Modules</Link>
         </li>
+        <li>
+          <Link to="/tailwind-css">TailwindCSS</Link>
+        </li>
       </ul>
     </nav>
   );
