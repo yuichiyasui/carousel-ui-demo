@@ -1,13 +1,16 @@
-import styles from "./App.module.css";
-import { Image } from "~/ui/Image";
 import useEmblaCarousel from "embla-carousel-react";
 
-export const App = () => {
+import styles from "./page.module.css";
+import { Image } from "~/ui/Image";
+import { Navigation } from "~/ui/Navigation";
+
+export const TopPage = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true });
 
   return (
-    <div>
+    <main>
       <h1>Carousel UI Demo</h1>
+      <Navigation />
       <div ref={emblaRef} className={`${styles.embla} embla`}>
         <div className={`${styles.embla__container} embla__container`}>
           <div className={`${styles.embla__slide} embla__slide`}>
@@ -39,6 +42,6 @@ export const App = () => {
           className={`${styles.logo} ${styles.react}`}
         />
       </a>
-    </div>
+    </main>
   );
 };
