@@ -1,44 +1,44 @@
-import { useState } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import { Image } from "~/ui/Image";
+import useEmblaCarousel from "embla-carousel-react";
 
 export const App = () => {
-  const [count, setCount] = useState(0);
+  const [emblaRef] = useEmblaCarousel({ loop: true });
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <Image
-            width={100}
-            height={100}
-            src="/vite.svg"
-            alt="Vite logo"
-            className="logo"
-          />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <Image
-            width={100}
-            height={100}
-            src="/react.svg"
-            alt="React logo"
-            className="logo react"
-          />
-        </a>
+    <div>
+      <h1>Carousel UI Demo</h1>
+      <div ref={emblaRef} className={`${styles.embla} embla`}>
+        <div className={`${styles.embla__container} embla__container`}>
+          <div className={`${styles.embla__slide} embla__slide`}>
+            <Image width={512} height={384} src="/sample1.jpg" alt="" />
+          </div>
+          <div className={`${styles.embla__slide} embla__slide`}>
+            <Image width={512} height={384} src="/sample2.jpg" alt="" />
+          </div>
+          <div className={`${styles.embla__slide} embla__slide`}>
+            <Image width={512} height={384} src="/sample3.jpg" alt="" />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+        <Image
+          width={100}
+          height={100}
+          src="/logo/vite.svg"
+          alt="Vite logo"
+          className={styles.logo}
+        />
+      </a>
+      <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+        <Image
+          width={100}
+          height={100}
+          src="/logo/react.svg"
+          alt="React logo"
+          className={`${styles.logo} ${styles.react}`}
+        />
+      </a>
     </div>
   );
 };
