@@ -1,0 +1,12 @@
+.base {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+  cursor: grab;
+}

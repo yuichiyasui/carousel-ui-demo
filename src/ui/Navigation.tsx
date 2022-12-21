@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
+import { NavLink } from "react-router-dom";
 
-import { InternalLink } from "~/ui/InternalLink";
+import { NavigationLink } from "./NavigationLink";
 
 type Props = {
   className?: string;
@@ -11,13 +12,13 @@ export const Navigation = ({ className }: Props) => {
     <nav className={clsx("table", className)}>
       <ul className={clsx("flex", "gap-x-5")}>
         <li>
-          <InternalLink to="/">TOP</InternalLink>
+          <NavigationLink to="/">TOP</NavigationLink>
         </li>
         <li>
-          <InternalLink to="/css-modules">CSS Modules</InternalLink>
+          <NavigationLink to="/css-modules">CSS Modules</NavigationLink>
         </li>
         <li>
-          <InternalLink to="/tailwind-css">TailwindCSS</InternalLink>
+          <NavigationLink to="/tailwind-css">TailwindCSS</NavigationLink>
         </li>
       </ul>
     </nav>

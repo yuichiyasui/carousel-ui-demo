@@ -1,25 +1,20 @@
-.basic-section {
-  max-width: 512px;
-  margin: 0 auto 24px;
-}
-.embla {
+.base {
   overflow: hidden;
 }
-.embla__container {
+
+.container {
   display: flex;
 }
-.embla__slide {
+
+.slide {
   flex: 0 0 100%;
   cursor: grab;
 }
 
-.with-button-section {
-  max-width: 512px;
-  margin: 0 auto;
-}
 .carousel-with-button {
   position: relative;
 }
+
 .next-button,
 .prev-button {
   position: absolute;
@@ -32,15 +27,18 @@
   transition: opacity 0.5s;
   opacity: 0.6;
 }
+
 .next-button:hover,
 .prev-button:hover {
   opacity: 0.9;
 }
+
 .next-button {
-  right: 0;
+  right: 1%;
 }
+
 .next-button:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: calc(50% - 2px);
@@ -50,11 +48,13 @@
   height: 10px;
   transform: translate(-50%, -50%) rotate(-135deg);
 }
+
 .prev-button {
-  left: 0;
+  left: 1%;
 }
+
 .prev-button:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: calc(50% + 2px);
