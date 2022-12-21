@@ -6,6 +6,21 @@ import { Navigation } from "~/ui/Navigation";
 import { PageTitle } from "~/ui/PageTitle";
 import { Image } from "~/ui/Image";
 
+const slides = [
+  {
+    id: "1",
+    src: "/sample1.jpg",
+  },
+  {
+    id: "2",
+    src: "/sample2.jpg",
+  },
+  {
+    id: "3",
+    src: "/sample3.jpg",
+  },
+];
+
 export const TailwindCssPage = () => {
   const [basicEmblaRef] = useEmblaCarousel({ loop: true });
 
@@ -18,17 +33,18 @@ export const TailwindCssPage = () => {
         <h2 className={clsx("font-bold", "text-2xl", "text-center", "mb-4")}>
           basic
         </h2>
-        <Carousel ref={basicEmblaRef}>
-          <Carousel.Container>
-            <Carousel.Slide>
-              <Image width={512} height={384} src="/sample1.jpg" alt="" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image width={512} height={384} src="/sample2.jpg" alt="" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image width={512} height={384} src="/sample3.jpg" alt="" />
-            </Carousel.Slide>
+        <Carousel ref={basicEmblaRef} className="overflow-hidden">
+          <Carousel.Container className="flex">
+            {slides.map((slide) => {
+              return (
+                <Carousel.Slide
+                  key={slide.id}
+                  className={clsx("cursor-grab", "basis-full", "shrink-0")}
+                >
+                  <Image width={512} height={384} src={slide.src} alt="" />
+                </Carousel.Slide>
+              );
+            })}
           </Carousel.Container>
         </Carousel>
       </section>
