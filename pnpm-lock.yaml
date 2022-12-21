@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react-swc': ^3.0.0
   autoprefixer: ^10.4.13
+  clsx: ^1.2.1
   embla-carousel-react: ^7.0.5
   postcss: ^8.4.20
   react: ^18.2.0
@@ -17,6 +18,7 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  clsx: 1.2.1
   embla-carousel-react: 7.0.5_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -544,6 +546,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}

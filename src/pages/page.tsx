@@ -1,4 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
+import { clsx } from "clsx";
 
 import "./style.css";
 import { Image } from "~/ui/Image";
@@ -24,10 +25,12 @@ export const TopPage = () => {
   return (
     <main>
       <PageTitle className="mb-4">Carousel UI Demo</PageTitle>
-      <Navigation className="mx-auto mb-6" />
+      <Navigation className={clsx("mx-auto", "mb-6")} />
 
       <section className="basic-section">
-        <h2 className="font-bold text-2xl text-center mb-4">basic</h2>
+        <h2 className={clsx("font-bold", "text-2xl", "text-center", "mb-4")}>
+          basic
+        </h2>
         <Carousel ref={basicEmblaRef}>
           <Carousel.Container>
             <Carousel.Slide>
@@ -44,7 +47,9 @@ export const TopPage = () => {
       </section>
 
       <section className="with-button-section">
-        <h2 className="font-bold text-2xl text-center mb-4">with button</h2>
+        <h2 className={clsx("font-bold", "text-2xl", "text-center", "mb-4")}>
+          with button
+        </h2>
         <Carousel className="carousel-with-button">
           <Carousel.Viewport ref={withButtonEmblaRef}>
             <Carousel.Container>

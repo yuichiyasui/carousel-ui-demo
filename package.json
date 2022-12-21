@@ -11,6 +11,7 @@
     "format": "rome format . --write"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "embla-carousel-react": "^7.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,3 +1,5 @@
+import { clsx } from "clsx";
+
 import { InternalLink } from "~/ui/InternalLink";
 
 type Props = {
@@ -6,8 +8,8 @@ type Props = {
 
 export const Navigation = ({ className }: Props) => {
   return (
-    <nav className={`table ${className ? className : ""}`}>
-      <ul className="flex gap-x-5">
+    <nav className={clsx("table", className)}>
+      <ul className={clsx("flex", "gap-x-5")}>
         <li>
           <InternalLink to="/">TOP</InternalLink>
         </li>

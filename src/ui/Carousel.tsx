@@ -1,4 +1,5 @@
 import { forwardRef, HTMLAttributes, ReactNode } from "react";
+import { clsx } from "clsx";
 
 type CarouselCantainerProps = {
   className?: string;
@@ -7,11 +8,7 @@ type CarouselCantainerProps = {
 
 const CarouselContaier = (props: CarouselCantainerProps) => {
   return (
-    <div
-      className={`embla__container${
-        props.className ? ` ${props.className}` : ""
-      }`}
-    >
+    <div className={clsx("embla__container", props.className)}>
       {props.children}
     </div>
   );
@@ -24,9 +21,7 @@ type CarouselSlideProps = {
 
 const CarouselSlide = (props: CarouselSlideProps) => {
   return (
-    <div
-      className={`embla__slide${props.className ? ` ${props.className}` : ""}`}
-    >
+    <div className={clsx("embla__slide", props.className)}>
       {props.children}
     </div>
   );
@@ -50,12 +45,7 @@ type CarouselViewportProps = {
 const CarouselViewport = forwardRef<HTMLDivElement, CarouselViewportProps>(
   (props, ref) => {
     return (
-      <div
-        ref={ref}
-        className={`embla__viewport${
-          props.className ? ` ${props.className}` : ""
-        }`}
-      >
+      <div ref={ref} className={clsx("embla__viewport", props.className)}>
         {props.children}
       </div>
     );
@@ -70,10 +60,7 @@ type CarouselProps = {
 export const CarouselRoot = forwardRef<HTMLDivElement, CarouselProps>(
   (props, ref) => {
     return (
-      <div
-        ref={ref}
-        className={`embla${props.className ? ` ${props.className}` : ""}`}
-      >
+      <div ref={ref} className={clsx("embla", props.className)}>
         {props.children}
       </div>
     );

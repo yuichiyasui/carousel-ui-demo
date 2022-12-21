@@ -1,12 +1,11 @@
 import { Link, LinkProps } from "react-router-dom";
+import { clsx } from "clsx";
 
 export const InternalLink = (props: LinkProps) => {
   return (
     <Link
       {...props}
-      className={`text-blue-600 hover:underline ${
-        props.className ? props.className : ""
-      }`}
+      className={clsx("text-blue-600", "hover:underline", props.className)}
     />
   );
 };

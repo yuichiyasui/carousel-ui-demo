@@ -14,8 +14,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route index element={<TopPage />} />
-        <Route path="/tailwind-css" element={<CssModulesPage />} />
-        <Route path="/css-modules" element={<TailwindCssPage />} />
+        <Route path="/tailwind-css" element={<TailwindCssPage />} />
+        <Route path="/css-modules" element={<CssModulesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
